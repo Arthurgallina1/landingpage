@@ -3,6 +3,27 @@ export type LogoProps = {
   url: string
 }
 
+export type HeaderProps = {
+  title: string
+  description: string
+  button: {
+    label: string
+    url: string
+  }
+  header_image: LogoProps
+}
+
+export type SectionAboutProjectProps = {
+  title: string
+  description: string
+  media: {
+    alternativeText: string
+    url: string
+  }
+}
+
 export type LandingPageProps = {
   logo: LogoProps
+  header: HeaderProps
+  sectionAboutProject: SectionAboutProjectProps
 }
