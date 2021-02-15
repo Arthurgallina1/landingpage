@@ -31,14 +31,29 @@ fragment sectionAboutProject on LandingPage {
   }
 }
 
+fragment sectionTech on LandingPage {
+  sectionTechs {
+    title
+    techIcons {
+      title
+      icon{
+        url
+      }
+    }
+  }
+}
+
+
 
 query GET_LANDING_PAGE {
   landingPage {
     ...logo
     ...header
     ...sectionAboutProject
+    ...sectionTech
   }
 }
+
 `
 
 export default GET_LANDING_PAGE
